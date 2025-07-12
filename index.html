@@ -11,26 +11,30 @@
   margin: auto; 
   padding: 20px; 
   line-height: 1.6; 
-  background-image: url('code-matrix.gif.gif');
+  background-image: url('code-matrix.gif');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* or 'contain' */
   background-position: center;
-  position: relative;
+  position: relative; /* needed for overlay */
+  z-index: 0; /* ensure stacking context */
 }
 
+/* Optional overlay for darker background for readability */
 body::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black overlay */
+  z-index: -1; /* behind content */
 }
 
+/* Make sure content appears above overlay */
 body > * {
   position: relative;
   z-index: 1;
 }
+
 
 
         h1, h2 { color: #333; }
