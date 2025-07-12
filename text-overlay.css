@@ -1,5 +1,5 @@
 .text-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.8); /* semi-transparent black background */
   padding: 20px; /* space inside the box */
   border-radius: 8px; /* optional, for rounded corners */
   color: #fff; /* make text white for contrast */
